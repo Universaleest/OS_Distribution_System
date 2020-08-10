@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wayneOS.dev.dao.ProductfreeDAO">
+
+<insert id="InsertProductfree">
+	INSERT INTO PRODUCTFREE(
+		vendorID,
+		productID, 
+		serialNumber,
+		deviceType,
+		deviceVolume,
+		realCapacity,
+		imgName,
+		internalIP,
+		externalIP,
+		ramSize,
+		ramClockSpeed,
+		CPU,
+		GPU,
+		LocalOSinfo,
+		initialReleaseDate,
+		lastReleaseDate,
+		releaseCount,
+		customerInfo0,
+		customerInfo1)
+	VALUES(
+		#{vendorID},
+		#{productID},
+		#{serialNumber},
+		#{deviceType},
+		#{deviceVolume},
+		#{realCapacity},
+		#{imgName},
+		#{internalIP},
+		#{externalIP},
+		#{ramSize},
+		#{ramClockSpeed},
+		#{CPU},
+		#{GPU},
+		#{LocalOSinfo},
+		NOW(),
+		NOW(),
+		#{releaseCount},
+		#{customerInfo0},
+		#{customerInfo1})
+		
+</insert>
+
+<delete id="DeleteProductfree">
+	DELETE FROM PRODUCTFREE WHERE idx=#{idx}
+</delete>
+
+<update id="UpdateProductfree">
+	UPDATE PRODUCTFREE SET vendorID = #{vendorID},
+		productID = #{productID},
+		serialNumber = #{serialNumber},deviceType = #{deviceType},
+		deviceVolume=#{deviceVolume}, realCapacity=#{realCapacity}, imgName=#{imgName}, internalIP=#{internalIP}, 
+		externalIP=#{externalIP}, ramSize=#{ramSize}, ramClockSpeed=#{ramClockSpeed}, CPU=#{CPU}, GPU=#{GPU},
+		LocalOSinfo=#{LocalOSinfo}, lastReleaseDate=#{lastReleaseDate}, releaseCount =#{releaseCount}, 
+		customerInfo0=#{customerInfo0},customerInfo1=#{customerInfo1}
+	WHERE idx=#{idx}
+</update>
+
+<select id="SelectProductfree" resultType="Map">
+	SELECT *FROM PRODUCTFREE WHERE idx = #{idx}
+</select>
+
+<select id="InqProductfree" resultType="Map">
+	SELECT * FROM PRODUCTFREE
+</select>
+
+<select id="ValidationProduct" resultType="String">
+	SELECT imgName 
+		FROM PRODUCTFREE /* PRODUCTFREE VALIDATE */
+	WHERE
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+		
+</select>
+
+
+<select id="SelectReleaseCount" resultType="Integer">
+	SELECT releaseCount 
+		FROM PRODUCTFREE /* PRODUCTFREE releaseCount */
+	WHERE
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+		
+		
+</select>
+
+
+<update id="UpdateLocalData">
+	UPDATE PRODUCTFREE /* PRODUCTFREE UpdateLocalData */
+	SET 
+		realCapacity = #{realCapacity},
+		imgName = #{imgName},
+		internalIP = #{internalIP},
+		externalIP = #{externalIP},
+		ramSize = #{ramSize},
+		ramClockSpeed = #{ramClockSpeed},
+		CPU = #{CPU},
+		GPU = #{GPU},
+		LocalOSinfo = #{LocalOSinfo}, 
+		releaseCount = #{releaseCount} 
+	WHERE 
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+
+</update>
+
+<select id="SelectOne" resultType="Map">
+	SELECT * FROM PRODUCTFREE
+	WHERE 
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+</select>
+
+</mapper>

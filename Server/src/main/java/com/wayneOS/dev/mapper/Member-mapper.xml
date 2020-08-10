@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+	14.12.19
+	EDIT : H
+	Member Mapper
+-->
+
+<mapper namespace="com.wayneOS.dev.dao.MemberDAO">
+
+<insert id="InsertMember">
+	INSERT INTO wayneOS.MEMBER(ID,PW) /*회원 저장 : H */
+	VALUES(#{ID},#{PW})
+	
+</insert>
+
+<update id="UpdateMember">
+	UPDATE wayneOS.MEMBER SET ID = #{ID} , PW = #{PW}
+	WHERE idx=#{idx}
+</update>
+
+<delete id="DeleteMember">
+	DELETE FROM wayneOS.MEMBER 
+	WHERE idx=#{idx}
+</delete>
+
+<select id="SelectMember" resultType="Map">
+	SELECT ID,PW FROM wayneOS.MEMBER /* 회원 조회 * H */ 
+	WHERE ID=#{ID} AND PW=#{PW}
+</select>
+
+<select id="InqMember" resultType="Map">
+	SELECT * FROM wayneOS.MEMBER;
+</select>
+</mapper>

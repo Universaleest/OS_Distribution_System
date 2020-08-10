@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StackedWidget</class>
+ <widget class="QStackedWidget" name="StackedWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>701</width>
+    <height>503</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>StackedWidget</string>
+  </property>
+  <widget class="WidgetMain" name="pageMain"/>
+  <widget class="WidgetLicenseInfo" name="pageLicenseInfo"/>
+  <widget class="WidgetSelectVersion" name="pageSelectVersion"/>
+  <widget class="WidgetSelectDisk" name="pageSelectDisk"/>
+  <widget class="WidgetSelectType" name="pageSelectType"/>
+  <widget class="WidgetSelectDiskSize" name="pageSelectDiskSize"/>
+  <widget class="WidgetPrepareComplete" name="pagePrepareComplete"/>
+  <widget class="WidgetInstall" name="pageInstall"/>
+  <widget class="WidgetComplete" name="pageComplete"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WidgetSelectDisk</class>
+   <extends>QWidget</extends>
+   <header>widgetselectdisk.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetInstall</class>
+   <extends>QWidget</extends>
+   <header>widgetinstall.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetLicenseInfo</class>
+   <extends>QWidget</extends>
+   <header>widgetlicenseinfo.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetMain</class>
+   <extends>QWidget</extends>
+   <header>widgetmain.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetSelectVersion</class>
+   <extends>QWidget</extends>
+   <header>widgetselectversion.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetSelectType</class>
+   <extends>QWidget</extends>
+   <header>widgetselecttype.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetPrepareComplete</class>
+   <extends>QWidget</extends>
+   <header>widgetpreparecomplete.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetSelectDiskSize</class>
+   <extends>QWidget</extends>
+   <header>widgetselectdisksize.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WidgetComplete</class>
+   <extends>QWidget</extends>
+   <header>widgetcomplete.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

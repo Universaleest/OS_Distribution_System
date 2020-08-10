@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.wayneOS.dev.dao.DeviceVolumeDAO">
+ 
+ <insert id="InsertDeviceVolume">
+	INSERT INTO DEVICEVOLUME(volumeSize)
+	VALUES(#{volumeSize})
+	
+</insert>
+
+<update id="UpdateDeviceVolume">
+	UPDATE DEVICEVOLUME SET volumeSize = #{volumeSize}
+	WHERE idx=#{idx}
+</update>
+
+<delete id="DeleteDeviceVolume">
+	DELETE FROM DEVICEVOLUME 
+	WHERE idx=#{idx}
+</delete>
+
+<select id="SelectDeviceVolume" resultType="Map">
+	SELECT idx, volumeSize FROM DEVICEVOLUME  
+	WHERE idx=#{idx} AND volumeSize=#{volumeSize}
+</select>
+
+<select id="InqDeviceVolume" resultType="Map">
+	SELECT * FROM DEVICEVOLUME order by volumeSize asc
+</select>
+ 
+ </mapper>
+ 

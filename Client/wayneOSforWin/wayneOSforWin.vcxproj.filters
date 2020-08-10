@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{f1856954-14d9-4d68-812a-2c99bada4ab5}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{88511a66-68ce-4999-a51e-0aa231b6016d}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Files\View">
+      <UniqueIdentifier>{e785c54a-b243-4201-af75-e7995987038b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HTTP">
+      <UniqueIdentifier>{b13baf68-497d-4338-b277-b57fe7c59be1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Info">
+      <UniqueIdentifier>{762d76dc-9b7a-494d-96e4-b9ccb9896595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Disk">
+      <UniqueIdentifier>{8c7a27f9-d0d1-422b-ad9c-04365fa12cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HTTP\Reqs">
+      <UniqueIdentifier>{f8264a9d-b842-44da-ab5b-e3110427fc30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\View\CustomControl">
+      <UniqueIdentifier>{611721fe-7927-441b-bf4c-0d6a7bba8d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WinDpiScale">
+      <UniqueIdentifier>{3d0e0b5c-7825-48cd-b902-5e1f6abf51cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="View\stackedwidget.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\stackedwidget.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetinstall.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetinstall.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetlicenseinfo.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetlicenseinfo.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetmain.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetmain.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetpreparecomplete.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetpreparecomplete.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselectdisk.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselectdisk.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselectdisksize.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselectdisksize.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselecttype.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselecttype.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselectversion.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetselectversion.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HTTP\httprequest.h">
+      <Filter>Source Files\HTTP</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HTTP\httpmanager.h">
+      <Filter>Source Files\HTTP</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HTTP\httpthread.h">
+      <Filter>Source Files\HTTP</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\CustomControl\titlebar.h">
+      <Filter>Source Files\View\CustomControl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetcomplete.h">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\widgetcomplete.ui">
+      <Filter>Source Files\View</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\stackedwidget.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_stackedwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_stackedwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\viewmanager.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetinstall.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetinstall.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetinstall.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetlicenseinfo.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetlicenseinfo.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetlicenseinfo.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetmain.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetmain.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetmain.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetpreparecomplete.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetpreparecomplete.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetpreparecomplete.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetselectdisk.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetselectdisk.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetselectdisk.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetselectdisksize.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetselectdisksize.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetselectdisksize.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetselecttype.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetselecttype.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetselecttype.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetselectversion.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetselectversion.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetselectversion.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\httprequest.cpp">
+      <Filter>Source Files\HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_httprequest.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_httprequest.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\urlstrings.cpp">
+      <Filter>Source Files\HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="Info\infomanager.cpp">
+      <Filter>Source Files\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="Disk\disk.cpp">
+      <Filter>Source Files\Disk</Filter>
+    </ClCompile>
+    <ClCompile Include="Disk\diskmanager.cpp">
+      <Filter>Source Files\Disk</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\httpmanager.cpp">
+      <Filter>Source Files\HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_httpmanager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_httpmanager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\httpthread.cpp">
+      <Filter>Source Files\HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_httpthread.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_httpthread.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\Reqs\reqosdata.cpp">
+      <Filter>Source Files\HTTP\Reqs</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\Reqs\reqosfile.cpp">
+      <Filter>Source Files\HTTP\Reqs</Filter>
+    </ClCompile>
+    <ClCompile Include="View\CustomControl\frametitlebar.cpp">
+      <Filter>Source Files\View\CustomControl</Filter>
+    </ClCompile>
+    <ClCompile Include="View\CustomControl\titlebar.cpp">
+      <Filter>Source Files\View\CustomControl</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_titlebar.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_titlebar.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\widgetcomplete.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_widgetcomplete.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_widgetcomplete.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP\Reqs\reqdevicevolume.cpp">
+      <Filter>Source Files\HTTP\Reqs</Filter>
+    </ClCompile>
+    <ClCompile Include="WinDpiScale\WinDpiScale.cpp">
+      <Filter>Source Files\WinDpiScale</Filter>
+    </ClCompile>
+    <ClCompile Include="formatusb.cpp">
+      <Filter>Source Files\Disk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_stackedwidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View\viewmanager.h">
+      <Filter>Source Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetinstall.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetlicenseinfo.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetmain.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetpreparecomplete.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetselectdisk.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetselectdisksize.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetselecttype.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetselectversion.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTP\urlstrings.h">
+      <Filter>Source Files\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="Info\infomanager.h">
+      <Filter>Source Files\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="Disk\disk.h">
+      <Filter>Source Files\Disk</Filter>
+    </ClInclude>
+    <ClInclude Include="Disk\diskmanager.h">
+      <Filter>Source Files\Disk</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTP\httpheaders.h">
+      <Filter>Source Files\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTP\Reqs\reqosdata.h">
+      <Filter>Source Files\HTTP\Reqs</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTP\Reqs\reqosfile.h">
+      <Filter>Source Files\HTTP\Reqs</Filter>
+    </ClInclude>
+    <ClInclude Include="View\CustomControl\frametitlebar.h">
+      <Filter>Source Files\View\CustomControl</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_widgetcomplete.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTTP\Reqs\reqdevicevolume.h">
+      <Filter>Source Files\HTTP\Reqs</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinDpiScale\WinDpiScale.h">
+      <Filter>Source Files\WinDpiScale</Filter>
+    </ClInclude>
+    <ClInclude Include="formatusb.h">
+      <Filter>Source Files\Disk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="wayneOSforWin.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+  </ItemGroup>
+</Project>

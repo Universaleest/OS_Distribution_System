@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wayneOS.dev.dao.ProductpaidDAO">
+
+<insert id="InsertProductpaid">
+	INSERT INTO PRODUCTPAID(
+		vendorID, 
+		productID, 
+		serialNumber, 
+		deviceType,
+		deviceVolume,
+		realCapacity,
+		imgName, 
+		internalIP,
+		externalIP,
+		ramSize,
+		ramClockSpeed,
+		CPU,
+		GPU,
+		LocalOSinfo,
+		initialReleaseDate, 
+		lastReleaseDate,
+		releaseCount, 
+		customerInfo0,
+		customerInfo1)
+		
+	VALUES(
+		#{vendorID}, 
+		#{productID}, 
+		#{serialNumber},
+		#{deviceType},
+		#{deviceVolume},
+		#{realCapacity},
+		#{imgName}, 
+		#{internalIP},
+		#{externalIP},
+		#{ramSize},
+		#{ramClockSpeed},
+		#{CPU},
+		#{GPU},
+		#{LocalOSinfo},
+		NOW(),
+		NOW(),
+		#{releaseCount}, 
+		#{customerInfo0},
+		#{customerInfo1})
+		
+</insert>
+
+<delete id="DeleteProductpaid">
+	DELETE FROM PRODUCTPAID 
+	WHERE idx = #{idx}
+</delete>
+
+<update id="UpdateProductpaid">
+	UPDATE PRODUCTPAID 
+	SET 
+		vendorID = #{vendorID},
+		productID = #{productID},
+		serialNumber = #{serialNumber},
+		deviceType = #{deviceType},
+		deviceVolume= #{deviceVolume},
+		realCapacity = #{realCapacity},
+		imgName = #{imgName},
+		internalIP = #{internalIP},
+		externalIP = #{externalIP},
+		ramSize = #{ramSize},
+		ramClockSpeed = #{ramClockSpeed},
+		CPU = #{CPU},
+		GPU = #{GPU},
+		LocalOSinfo = #{LocalOSinfo}, 
+		lastReleaseDate = #{lastReleaseDate},
+		releaseCount = #{releaseCount}, 
+		customerInfo0 = #{customerInfo0},
+		customerInfo1 = #{customerInfo1}
+	WHERE idx = #{idx}
+</update>
+
+<select id="SelectProductpaid" resultType="Map">
+	SELECT *FROM PRODUCTPAID 
+	WHERE idx = #{idx}
+</select>
+
+<select id="InqProductpaid" resultType="Map">
+	SELECT * FROM PRODUCTPAID
+</select>
+
+<select id="ValidationProduct" resultType="String">
+	SELECT imgName 
+		FROM PRODUCTPAID /* PRODUCTPAID VALIDATE */
+	WHERE
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+		
+		
+</select>
+
+
+<select id="SelectReleaseCount" resultType="Integer">
+	SELECT releaseCount 
+		FROM PRODUCTPAID /* PRODUCTPAID releaseCount */
+	WHERE
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+		
+		
+</select>
+
+
+<update id="UpdateLocalData">
+	UPDATE PRODUCTPAID /* PRODUCTPAID UpdateLocalData */
+	SET 
+		realCapacity = #{realCapacity},
+		internalIP = #{internalIP},
+		externalIP = #{externalIP},
+		ramSize = #{ramSize},
+		ramClockSpeed = #{ramClockSpeed},
+		CPU = #{CPU},
+		GPU = #{GPU},
+		LocalOSinfo = #{LocalOSinfo},
+		releaseCount = #{releaseCount} 
+	WHERE 
+		vendorID = #{vendorID} AND
+		productID = #{productID} AND
+		serialNumber = #{serialNumber} AND
+		deviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType}
+
+</update>
+</mapper>
+
+ 

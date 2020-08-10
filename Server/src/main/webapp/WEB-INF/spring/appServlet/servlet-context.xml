@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+	<context:component-scan base-package="com.wayneOS.dev" />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+
+
+	<beans:bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" id="jsonConverter">
+		<beans:property name="supportedMediaTypes" value="application/json;charset=UTF-8"/>
+		<beans:property name="objectMapper">
+        	<beans:bean class="com.wayneOS.dev.Model.ObjectMapper.CustomObjectMapper" />
+       	</beans:property>
+	</beans:bean> 
+
+<beans:bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter" id="byteArrayMessageConverter"> 
+	<beans:property name="supportedMediaTypes" value="application/octet-stream" />
+</beans:bean>
+
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- <mapping path="/login_success.do"/> -->
+			<mvc:mapping path="/**"/>
+			<mvc:exclude-mapping path="/"/>
+			<mvc:exclude-mapping path="/test*.do"/>
+			<mvc:exclude-mapping path="/resources/**"/>
+			<mvc:exclude-mapping path="/loginUi.do"/>
+			
+			<beans:bean class="com.wayneOS.dev.interceptor.Interceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	 <!-- 
+ <beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" />
+     -->
+     <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="5368709120"></beans:property>
+		<beans:property name="defaultEncoding" value="UTF-8"></beans:property>
+	</beans:bean>
+
+
+</beans:beans>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+  xsi:schemaLocation="
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+ 
+<!-- 	<mybatis:scan base-package="com.wayneOS.dev.dao" /> -->  
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    	<property name="basePackage" value="com.wayneOS.dev.dao" />
+	</bean>
+
+
+	<bean id="propertyPlaceholderConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>/WEB-INF/mybatis/jdbc.properties</value> 
+        </property>
+    </bean>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+    </bean>
+    
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
+      <property name="dataSource" ref="dataSource" />                                         
+      <property name="mapperLocations" value="classpath:com/wayneOS/dev/mapper/*.xml" /> 
+           
+    </bean>
+    
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+      <constructor-arg ref="sqlSessionFactory" /> 
+    </bean>
+    
+    <bean id="transactionManager"  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+  		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	
+        
+	<!--     
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	
+	<bean id="userDaoImpl" class="com.ncube.projectd.dao.mybatis.UserDaoImpl">                          
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+    <bean id="profileDaoImpl" class="com.ncube.projectd.dao.mybatis.ProfileDaoImpl">                          
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+    
+    <bean id="CourseListDaoImpl" class="com.ncube.projectd.dao.mybatis.CourseListDaoImpl">
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+    <bean id="RankingDaoImpl" class="com.ncube.projectd.dao.mybatis.RankingDaoImpl">
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+    <bean id="UserActivationLogDaoImpl" class="com.ncube.projectd.dao.mybatis.UserActivationLogDaoImpl">
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+     -->
+</beans>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="com.wayneOS.dev.dao.ImgDAO">
+  
+  <insert id="InsertImg">
+	INSERT INTO IMG(imgName,versionType,deviceType,availableDeviceVolume)
+	VALUES(#{imgName},#{versionType},#{deviceType},#{availableDeviceVolume})
+	
+</insert>
+
+<update id="UpdateImg">
+	UPDATE IMG SET imgName = #{imgName},
+		versionType = #{versionType},
+		deviceType = #{deviceType},
+		availableDeviceVolume = #{availableDeviceVolume}
+		WHERE idx=#{idx}
+</update>
+
+<delete id="DeleteImg">
+	DELETE FROM IMG 
+	WHERE idx=#{idx}
+</delete>
+
+<select id="SelectImg" resultType="Map">
+	SELECT imgName,vendorID,productID,versionType,deviceType,availableDeviceVolume,insertDate FROM IMG  
+	WHERE idx=#{idx}
+</select>
+
+<select id="InqImg" resultType="Map">
+	SELECT * FROM IMG;
+</select>
+ 
+ 
+ <select id="ValidationFreeProduct" resultType="String">
+	SELECT imgName 
+		FROM IMG /* IMG FREE VALIDATE */
+	WHERE
+		availableDeviceVolume = #{deviceVolume} AND
+		deviceType = #{deviceType} AND
+		versionType = #{versionType}
+</select>
+
+ </mapper>

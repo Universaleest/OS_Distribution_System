@@ -1,0 +1,280 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Default Styles 
+--------------------------------------------------------------------*/
+body {
+	background: url('img/denim.png');
+	font-family: 'Droid Sans', sans-serif;;
+}
+
+.clearfix {
+	clear: both;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.wrap {
+	
+}
+
+nav {
+	border-radius: 6px;
+	padding: 0 10px;
+	position: relative;
+	margin: 0 auto;
+	width: 740px;
+}
+
+.menu li {
+	float: left;
+	position: relative;
+}
+
+.menu li a {
+	color: #444;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 6px 12px;
+	margin: 8px 8px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background: -webkit-gradient(linear, center top, center bottom, from(#ededed),
+		to(#fff));
+	background-image: linear-gradient(#ededed, #fff);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+	color: #222;
+}
+
+/* Dropdown styles */
+.menu ul {
+	position: absolute;
+	left: -9999px;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.menu ul li {
+	float: none;
+}
+
+.menu ul a {
+	white-space: nowrap;
+}
+
+/* Displays the dropdown on hover and moves back into position */
+.menu li:hover ul {
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 0 0 6px 6px;
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+	left: 5px;
+	opacity: 1;
+}
+
+/* Persistant Hover State */
+.menu li:hover a {
+	background: -webkit-gradient(linear, center top, center bottom, from(#ccc),
+		to(#ededed));
+	background-image: linear-gradient(#ccc, #ededed);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+	color: #222;
+}
+
+.menu li:hover ul a {
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.menu li:hover ul li a:hover {
+	background: -webkit-gradient(linear, center top, center bottom, from(#eee),
+		to(#fff));
+	background-image: linear-gradient(#ededed, #fff);
+	border-radius: 12px;
+	box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.iframe-userUi {
+	width: 1450px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+.list_area {
+	display: inline;
+	float: left;
+}
+
+.crud_area {
+	display: block;
+	float: right;
+	margin-top: 20px;
+}
+
+.crud_area_box {
+	margin-bottom: 20px;
+	border: 1px solid black;
+	height: 400px;
+	clear: both;
+	padding: 25px 25px;
+}
+
+.btn_area {
+	margin-bottom: 30px;
+}
+
+.table_area {
+	margin-bottom: 30px;
+	height: 400px;
+}
+
+.table_area tr,td{
+	border-spacing: 20px 20px;
+}
+.table_area b {
+	font-family: "IconicStroke";
+	font-size: 15px;
+	line-height: 20px;
+	margin-right: 10px;
+}
+
+.table_area input {
+	font-family: "IconicStroke";
+	font-size: 15px;
+	line-height: 20px;
+	margin-right: 15px;
+}
+.table_area .idx {
+	border: none;
+	height: 25px;
+	width: 90px;
+	font-size: 13px;
+	padding: 4px 4px 4px 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 8px white;
+	-moz-box-shadow: 0px 0px 8px white;
+	-webkit-box-shadow: 0px 0px 8px white;
+	text-align: center;
+
+	}
+.table_area .input {
+	border: 1px solid #c4c4c4;
+	height: 25px;
+	width: 90px;
+	font-size: 13px;
+	padding: 4px 4px 4px 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 8px #d9d9d9;
+	-moz-box-shadow: 0px 0px 8px #d9d9d9;
+	-webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+.table_area .input:focus, .text_area .input.focus
+	{
+	outline: none;
+	border: 1px solid #7bc1f7;
+	box-shadow: 0px 0px 8px #7bc1f7;
+	-moz-box-shadow: 0px 0px 8px #7bc1f7;
+	-webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+.save_area {
+	margin: 10px 10px;
+	float: left;
+}
+.div-margin{
+	margin-bottom: 30px;
+}
+
+div#viewLoading {
+	background-image: url(/resources/images/viewLoading.gif);
+	text-align: center;
+	padding-top: 70px;
+	background: #FFFFF0;
+	filter: alpha(opacity = 60);
+	opacity: alpha*0.6;
+	margin:0 auto;
+	
+}
+
+.wrap-loading{ /*화면 전체를 어둡게 합니다.*/
+	z-index: 1;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    /*background: rgba(0,0,0,0.2); */ /*not in ie */
+    /* filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000'); */   /* ie */
+    
+}
+.wrap-loading div{ /*로딩 이미지*/
+        position: fixed;
+        top:50%;
+        left:50%;
+        margin-left: -21px;
+        margin-top: -21px;
+    }
+.display-none{ /*감추기*/
+        display:none;
+    }
